@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+# Most of this taken from the following sources:
+# https://github.com/mikeprivette/yanmss/blob/master/setup.sh
+# https://github.com/fesja/dotfiles/blob/master/.macos
+# https://github.com/twhite96/dot-files/blob/master/.macos
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Setup the Dock
+# Automatically hide and show the dock
+defaults write com.apple.dock autohide -bool TRUE;
+
+# Enable Magnification
+defaults write com.apple.dock magnification -bool TRUE;
+
+# Set the Dock tilesize to 24
+defaults write com.apple.dock tilesize -int 24;
+
+# Change the app minimize effect
+# Possible values: suck, genie, scale
+defaults write com.apple.dock mineffect -string suck;
+
+# Don't show recent apps in Dock
+# Remove Downloads folder in Dock
+# Only show active apps in Dock
+
+# Reset the Dock so the above changes take effect
+killall Dock
+
+
+# Setup Finder
+# Always show items in columns
+# Hide Tags
+
+
+# Enable “Stacks” on Desktop
+# Enable stick to grid on Desktop
+# Reduce icon size on Desktop
+
+
+# Set Appearance to 'Auto'
+# Reduce items in Spotlight to Applications, Documents, FOlders, Images
+# Trackpad Point & Click: Off: Look up & data detectors, Tap to click, Silent clicking, Force Click and haptic feedback; On: Secondary click
+# Trackpad More Gestures: Off: Swipe between pages, App Expose, Launchpad; On: Swipe between full-screen apps, Notification Center, Show Desktop
+# Hot Corners... Bottom Left is set to "Put Display to Sleep"
+# Disable Siri in menu bar
+# Disable Notifications in menu bar
+
+# Other
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
