@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-# Most of this taken from the following sources:
+# Sources:
 # https://github.com/mikeprivette/yanmss/blob/master/setup.sh
 # https://github.com/fesja/dotfiles/blob/master/.macos
 # https://github.com/twhite96/dot-files/blob/master/.macos
+# http://hamell.net/useful-os-x-commands/
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
