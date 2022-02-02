@@ -32,7 +32,12 @@ killall Dock
 
 # Setup Finder
 # Always show items in columns
+defaults write com.apple.finder FXPreferredViewStyle clmv;
+
 # Hide Tags
+
+# Reset the Finder so the above changes take effect
+killall Finder
 
 
 # Enable “Stacks” on Desktop
