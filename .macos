@@ -11,10 +11,10 @@ osascript -e 'tell application "System Preferences" to quit'
 
 # Setup the Dock
 # Automatically hide and show the dock
-defaults write com.apple.dock autohide -bool TRUE;
+defaults write com.apple.dock autohide -bool true;
 
 # Enable Magnification
-defaults write com.apple.dock magnification -bool TRUE;
+defaults write com.apple.dock magnification -bool true;
 
 # Set the Dock tilesize to 24
 defaults write com.apple.dock tilesize -int 24;
@@ -23,9 +23,8 @@ defaults write com.apple.dock tilesize -int 24;
 # Possible values: suck, genie, scale
 defaults write com.apple.dock mineffect -string suck;
 
-# Don't show recent apps in Dock
-# Remove Downloads folder in Dock
 # Only show active apps in Dock
+defaults write com.apple.dock static-only -bool true;
 
 # Reset the Dock so the above changes take effect
 killall Dock
