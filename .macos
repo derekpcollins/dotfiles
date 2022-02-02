@@ -9,6 +9,7 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
+
 # Setup the Dock
 # Automatically hide and show the dock
 defaults write com.apple.dock autohide -bool true;
@@ -35,25 +36,34 @@ killall Dock
 defaults write com.apple.finder FXPreferredViewStyle clmv;
 
 # Hide Tags
+defaults write com.apple.finder ShowRecentTags -bool false;
+
+# Enable “Stacks” on Desktop
+# Also enables stick to grid
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:GroupBy Kind" ~/Library/Preferences/com.apple.finder.plist
+
+# Reduce icon size on Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:iconSize 48" ~/Library/Preferences/com.apple.finder.plist
+
+# Reduce grid spacing on Desktop
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:gridSpacing 18" ~/Library/Preferences/com.apple.finder.plist
 
 # Reset the Finder so the above changes take effect
 killall Finder
 
 
-# Enable “Stacks” on Desktop
-# Enable stick to grid on Desktop
-# Reduce icon size on Desktop
-
-
 # Set Appearance to 'Auto'
-# Reduce items in Spotlight to Applications, Documents, FOlders, Images
+# Reduce items in Spotlight to Applications, Calculator, Conversion, Folders, System Preferences
 # Trackpad Point & Click: Off: Look up & data detectors, Tap to click, Silent clicking, Force Click and haptic feedback; On: Secondary click
 # Trackpad More Gestures: Off: Swipe between pages, App Expose, Launchpad; On: Swipe between full-screen apps, Notification Center, Show Desktop
-# Hot Corners... Bottom Left is set to "Put Display to Sleep"
-# Disable Siri in menu bar
-# Disable Notifications in menu bar
+# Hot Corners... Bottom Left is set to "Put Display to Sleep" or "Start Screensaver"
+
 
 # Other
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Require password immediately after sleep or screen saver begins (reduces the normal delay)
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
