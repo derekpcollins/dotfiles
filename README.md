@@ -4,7 +4,7 @@ I've included a zsh script that will create the necessary symlinks for these dot
 
 `zsh ~/dotfiles/symlinks.zsh`
 
-If you needed to, you can create the symlinks manually like so:
+If you need to, you can create the symlinks manually like so:
 
 `ln -s ~/path/to/dotfile ~/.dotfile`
 
