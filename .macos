@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# Sources:
-# https://github.com/mikeprivette/yanmss/blob/master/setup.sh
-# https://github.com/fesja/dotfiles/blob/master/.macos
-# https://github.com/twhite96/dot-files/blob/master/.macos
-# http://hamell.net/useful-os-x-commands/
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -53,13 +48,6 @@ defaults write com.apple.finder ShowRecentTags -bool false;
 killall Finder
 
 
-# Set Appearance to 'Auto'
-# Reduce items in Spotlight to Applications, Calculator, Conversion, Folders, System Preferences
-# Trackpad Point & Click: Off: Look up & data detectors, Tap to click, Silent clicking, Force Click and haptic feedback; On: Secondary click
-# Trackpad More Gestures: Off: Swipe between pages, App Expose, Launchpad; On: Swipe between full-screen apps, Notification Center, Show Desktop
-# Hot Corners... Bottom Left is set to "Put Display to Sleep" or "Start Screensaver"
-
-
 # Other
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -68,3 +56,18 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 # Require password immediately after sleep or screen saver begins (reduces the normal delay)
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+
+# To do
+# Set Appearance to 'Auto'
+# Reduce items in Spotlight to Applications, Calculator, Conversion, Folders, System Preferences
+# Trackpad Point & Click: Off: Look up & data detectors, Tap to click, Silent clicking, Force Click and haptic feedback; On: Secondary click
+# Trackpad More Gestures: Off: Swipe between pages, App Expose, Launchpad; On: Swipe between full-screen apps, Notification Center, Show Desktop
+# Hot Corners... Bottom Left is set to "Put Display to Sleep" or "Start Screensaver"
+
+
+# Sources:
+# https://github.com/mikeprivette/yanmss/blob/master/setup.sh
+# https://github.com/fesja/dotfiles/blob/master/.macos
+# https://github.com/twhite96/dot-files/blob/master/.macos
+# http://hamell.net/useful-os-x-commands/
