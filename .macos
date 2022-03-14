@@ -67,6 +67,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Trackpad Point & Click: Off: Look up & data detectors, Tap to click, Silent clicking, Force Click and haptic feedback; On: Secondary click
 # Trackpad More Gestures: Off: Swipe between pages, App Expose, Launchpad; On: Swipe between full-screen apps, Notification Center, Show Desktop
 # Hot Corners... Bottom Left is set to "Put Display to Sleep" or "Start Screensaver"
+# Turn off System Preferences > Trackpad > More Gestures and disble Swipe between pages
 
 
 # Sources:
